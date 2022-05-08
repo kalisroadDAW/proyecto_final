@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" *ngIf="identity">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText" *ngIf="identity">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Timeline</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gente">Gente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mis-datos">Mis datos</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <img *ngIf="identity && identity.image" src="{{url+ 'get-image-user/' + identity.image}}" class="rounded-circle" alt="Avatar" />   
+        
+       
+       
+      
+       
+
+      
+
+     </span>
+
+     
+      <span class="navbar-text">
+         
+        <a class="btn btn" href="/login" (click)="logout()">Cerrar sesión</a>
+       
+        
+
+       
+
+      </span>
+    </div>
+  </div>
+</nav>
+
+{{identity}}
+
+<router-outlet></router-outlet>
